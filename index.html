@@ -150,8 +150,8 @@
   .tour-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
     overflow:hidden;display:flex;flex-direction:column;transition:transform .2s, box-shadow .2s}
   .tour-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-  .tour-img{height:160px;position:relative;display:grid;place-items:end start;color:#fff;
-    font-weight:700;padding:16px;font-size:1.02rem}
+  .tour-img{height:100px;position:relative;display:grid;place-items:end start;color:#fff;
+    font-weight:700;padding:10px 12px;font-size:.95rem}
   .tour-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.35))}
   .tour-img span{position:relative;z-index:1}
   .tour-img.seoul{background:linear-gradient(135deg,#2a7d68,#164f42)}
@@ -159,17 +159,50 @@
   .tour-img.sokcho{background:linear-gradient(135deg,#3a6ea5,#274c73)}
   .tour-img.layover{background:linear-gradient(135deg,#c9603f,#9c4327)}
   .tour-img.custom{background:linear-gradient(135deg,#7a5cc9,#4c3399)}
-  .cat-tag{position:absolute;top:14px;left:14px;z-index:1;background:rgba(255,255,255,.92);
+  .cat-tag{position:absolute;top:8px;left:8px;z-index:1;background:rgba(255,255,255,.92);
     color:var(--ink);font-size:.72rem;font-weight:700;padding:5px 11px;border-radius:999px;letter-spacing:.03em}
-  .platform-tag{position:absolute;top:14px;right:14px;z-index:1;background:rgba(0,0,0,.35);
+  .platform-tag{position:absolute;top:8px;right:8px;z-index:1;background:rgba(0,0,0,.35);
     color:#fff;font-size:.68rem;font-weight:700;padding:5px 10px;border-radius:999px;letter-spacing:.04em}
-  .tour-body{padding:22px;flex:1;display:flex;flex-direction:column}
+  .tour-body{padding:18px;flex:1;display:flex;flex-direction:column}
   .tour-body h3{font-size:1.14rem;margin-bottom:8px;line-height:1.3}
   .tour-body p{color:var(--ink-soft);font-size:.93rem;flex:1}
-  .tour-meta{display:flex;gap:16px;margin:15px 0;font-size:.84rem;color:var(--ink-soft);flex-wrap:wrap}
+  .tour-meta{display:flex;gap:16px;margin:12px 0;font-size:.84rem;color:var(--ink-soft);flex-wrap:wrap}
   .tour-meta span{display:flex;align-items:center;gap:6px}
-  .tour-card .btn{margin-top:6px;text-align:center}
+  .tour-card .btn{margin-top:4px;text-align:center;align-self:flex-start;
+    width:60%;box-sizing:border-box;
+    font-size:calc(.95rem * .75);padding:calc(12px * .6) calc(24px * .6);
+    box-shadow:0 5px 12px rgba(31,111,92,.22)}
+  .tour-card .btn-primary:hover{box-shadow:0 7px 16px rgba(31,111,92,.3)}
   .empty-note{grid-column:1/-1;text-align:center;color:var(--ink-soft);padding:30px;display:none}
+  .specialty-panel{display:none;grid-column:1/-1;background:var(--white);border:1px solid var(--line);
+    border-radius:var(--radius);padding:36px 32px;max-width:720px;margin:0 auto;text-align:left}
+  .specialty-panel.show{display:block}
+  .specialty-panel .eyebrow{display:inline-block;margin-bottom:10px}
+  .specialty-panel h3{font-size:1.45rem;margin-bottom:14px}
+  .specialty-panel p{color:var(--ink-soft);font-size:1.02rem;margin-bottom:14px;max-width:58ch}
+  .specialty-panel .note{font-size:.9rem;color:var(--ink-soft);background:var(--accent-soft);
+    padding:12px 16px;border-radius:10px;margin:18px 0 22px}
+  .specialty-contacts{display:flex;flex-wrap:wrap;gap:12px 28px}
+  .specialty-contacts a{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink);
+    font-size:.95rem;transition:color .15s}
+  .specialty-contacts a:hover{color:var(--accent)}
+  .specialty-contacts .ci{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);
+    color:var(--accent);display:grid;place-items:center;font-size:1rem;flex-shrink:0}
+  .paypal-box{margin-top:22px;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+  .paypal-box h4{font-size:1.05rem;margin-bottom:8px}
+  .paypal-box .hint{color:var(--ink-soft);font-size:.92rem;margin-bottom:16px}
+  .paypal-form{display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+  .paypal-form .field{margin:0;flex:1;min-width:140px}
+  .paypal-form .field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px}
+  .paypal-form .field input,.paypal-form .field select{width:100%;padding:12px 14px;border:1px solid var(--line);
+    border-radius:10px;font-size:.95rem;font-family:inherit;background:var(--white);color:var(--ink)}
+  .paypal-form .field input:focus,.paypal-form .field select:focus{outline:none;border-color:var(--accent);
+    box-shadow:0 0 0 3px var(--accent-soft)}
+  .paypal-form .btn-paypal{background:#0070ba;color:#fff;border:0;border-radius:999px;font-weight:700;
+    font-size:.92rem;padding:12px 22px;cursor:pointer;white-space:nowrap;transition:background .15s,transform .15s}
+  .paypal-form .btn-paypal:hover{background:#005ea6;transform:translateY(-1px)}
+  .paypal-alt{margin-top:14px;font-size:.88rem;color:var(--ink-soft)}
+  .paypal-alt a{color:var(--accent);font-weight:600}
 
   /* THEME TAGS */
   .themes{margin-top:52px;text-align:center}
@@ -234,6 +267,11 @@
     display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
   .contact-line b{display:block;font-size:.95rem}
   .contact-line span{font-size:.9rem;color:var(--ink-soft)}
+  .contact-kakao{margin-bottom:20px}
+  .contact-kakao .contact-line{margin-bottom:12px}
+  .kakao-qr{display:block;width:min(220px,100%);height:auto;border-radius:16px;
+    border:1px solid var(--line);box-shadow:var(--shadow)}
+  .specialty-contacts .kakao-qr{width:min(180px,100%);margin-top:4px}
   form{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:32px;box-shadow:var(--shadow)}
   .field{margin-bottom:18px}
   .field label{display:block;font-size:.88rem;font-weight:600;margin-bottom:7px}
@@ -523,6 +561,8 @@
       <button class="filter-btn" data-filter="sokcho">Sokcho &amp; East Sea</button>
       <button class="filter-btn" data-filter="layover">Airport Layover</button>
       <button class="filter-btn" data-filter="custom">Custom trips</button>
+      <button class="filter-btn" data-filter="business">Business trip</button>
+      <button class="filter-btn" data-filter="medical">Medical trip</button>
     </div>
 
     <div class="tours-grid" id="toursGrid">
@@ -693,6 +733,77 @@
       </a>
 
       <div class="empty-note" id="emptyNote">More tours in this category are coming soon — <a href="#book" class="accent">ask MYK directly</a>.</div>
+
+      <div class="specialty-panel" id="panel-custom" data-specialty="custom">
+        <span class="eyebrow">Custom trips</span>
+        <h3>Design your own private trip</h3>
+        <p>Café-hopping, shopping, golf, medical or skincare trips, or a multi-day itinerary — tell MYK what you want and get a tailor-made plan and quote.</p>
+        <p>After you agree on an itinerary and price, you can pay securely with PayPal below (deposit or full amount).</p>
+        <div class="note">Reach out first to plan dates and a custom quote — then pay when you're ready.</div>
+        <div class="specialty-contacts">
+          <a href="tel:+821092628007"><span class="ci">&#128241;</span>Phone</a>
+          <a href="https://wa.me/821092628007" target="_blank" rel="noopener"><span class="ci">&#128242;</span>WhatsApp</a>
+          <a href="mailto:leesol1999@naver.com"><span class="ci">&#9993;</span>Email</a>
+        </div>
+        <div class="contact-kakao" style="margin-top:18px">
+          <div class="contact-line"><div class="ci">&#128172;</div><div><b>KakaoTalk</b><span>Scan to chat</span></div></div>
+          <img class="kakao-qr" src="images/kakao-qr.png" alt="KakaoTalk QR code for Kyungchul Marcos Lee" width="440" height="440">
+        </div>
+        <div class="paypal-box">
+          <h4>Pay with PayPal</h4>
+          <p class="hint">Enter the amount MYK confirmed with you, then continue to PayPal Checkout.</p>
+          <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noopener">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="2WTUJLUEHDHVA">
+            <input type="hidden" name="item_name" value="MYK Custom Trip">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="no_shipping" value="1">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="return" value="https://myktravel.com/#book">
+            <input type="hidden" name="cancel_return" value="https://myktravel.com/#tours">
+            <div class="field">
+              <label for="paypalAmount">Amount (USD)</label>
+              <input type="number" id="paypalAmount" name="amount" min="1" step="0.01" placeholder="e.g. 100" required>
+            </div>
+            <button type="submit" class="btn-paypal">Pay with PayPal</button>
+          </form>
+          <p class="paypal-alt">Need a quote first? <a href="#book">Send an inquiry</a> and MYK will reply within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="specialty-panel" id="panel-business" data-specialty="business">
+        <span class="eyebrow">Business trip</span>
+        <h3>Corporate &amp; market research guiding</h3>
+        <p>MYK supports company executives and employees visiting Korea for market research, exhibitions, factory or partner visits, and business hospitality — with English guiding tailored to your schedule.</p>
+        <p>Tell us who you're meeting and what you need to see; a dedicated itinerary page is coming soon.</p>
+        <div class="note">For now, reach out directly to plan dates, locations, and group size.</div>
+        <div class="specialty-contacts">
+          <a href="tel:+821092628007"><span class="ci">&#128241;</span>Phone</a>
+          <a href="https://wa.me/821092628007" target="_blank" rel="noopener"><span class="ci">&#128242;</span>WhatsApp</a>
+          <a href="mailto:leesol1999@naver.com"><span class="ci">&#9993;</span>Email</a>
+        </div>
+        <div class="contact-kakao" style="margin-top:18px">
+          <div class="contact-line"><div class="ci">&#128172;</div><div><b>KakaoTalk</b><span>Scan to chat</span></div></div>
+          <img class="kakao-qr" src="images/kakao-qr.png" alt="KakaoTalk QR code for Kyungchul Marcos Lee" width="440" height="440">
+        </div>
+      </div>
+
+      <div class="specialty-panel" id="panel-medical" data-specialty="medical">
+        <span class="eyebrow">Medical trip</span>
+        <h3>Medical, beauty &amp; wellness guiding</h3>
+        <p>MYK guides medical and beauty travelers for skincare, plastic surgery consultations, health check-ups, hair spa, salons, and related appointments — from clinic visits to recovery-friendly downtime.</p>
+        <p>Hospital and clinic visits can include professional medical interpretation. Marcos holds a <b>Medical Tourism Interpretation Certificate</b> (의료관광통역자격증).</p>
+        <div class="note">Detailed medical-trip pages are in the works — contact MYK to start planning.</div>
+        <div class="specialty-contacts">
+          <a href="tel:+821092628007"><span class="ci">&#128241;</span>Phone</a>
+          <a href="https://wa.me/821092628007" target="_blank" rel="noopener"><span class="ci">&#128242;</span>WhatsApp</a>
+          <a href="mailto:leesol1999@naver.com"><span class="ci">&#9993;</span>Email</a>
+        </div>
+        <div class="contact-kakao" style="margin-top:18px">
+          <div class="contact-line"><div class="ci">&#128172;</div><div><b>KakaoTalk</b><span>Scan to chat</span></div></div>
+          <img class="kakao-qr" src="images/kakao-qr.png" alt="KakaoTalk QR code for Kyungchul Marcos Lee" width="440" height="440">
+        </div>
+      </div>
     </div>
 
     <div class="themes reveal">
@@ -801,7 +912,12 @@
       <p>Ready-made tours are bookable instantly on the platforms above. For custom trips — medical, golf, café, shopping, skincare, or multi-day — message MYK and get a reply within 24 hours.</p>
       <a class="contact-line" href="mailto:leesol1999@naver.com"><div class="ci">&#9993;</div><div><b>Email</b><span>leesol1999@naver.com</span></div></a>
       <a class="contact-line" href="mailto:leesol99@hotmail.com"><div class="ci">&#9993;</div><div><b>Email (alt)</b><span>leesol99@hotmail.com</span></div></a>
-      <a class="contact-line" href="tel:+821092628007"><div class="ci">&#128241;</div><div><b>Phone · KakaoTalk · WhatsApp</b><span>+82 10-9262-8007</span></div></a>
+      <a class="contact-line" href="tel:+821092628007"><div class="ci">&#128241;</div><div><b>Phone</b><span>+82 10-9262-8007</span></div></a>
+      <div class="contact-kakao" id="kakao">
+        <div class="contact-line"><div class="ci">&#128172;</div><div><b>KakaoTalk</b><span>Scan the QR to add Kyungchul Marcos Lee</span></div></div>
+        <img class="kakao-qr" src="images/kakao-qr.png" alt="KakaoTalk QR code for Kyungchul Marcos Lee" width="440" height="440">
+      </div>
+      <a class="contact-line" href="https://wa.me/821092628007" target="_blank" rel="noopener"><div class="ci">&#128242;</div><div><b>WhatsApp</b><span>010-9262-8007</span></div></a>
     </div>
     <form id="bookingForm" novalidate>
       <div class="field-row">
@@ -844,7 +960,7 @@
       </div>
       <div>
         <h4>Get in touch</h4>
-        <ul><li><a href="#book">Book a tour</a></li><li><a href="mailto:leesol1999@naver.com">leesol1999@naver.com</a></li><li><a href="mailto:leesol99@hotmail.com">leesol99@hotmail.com</a></li><li><a href="tel:+821092628007">+82 10-9262-8007</a></li></ul>
+        <ul><li><a href="#book">Book a tour</a></li><li><a href="mailto:leesol1999@naver.com">leesol1999@naver.com</a></li><li><a href="mailto:leesol99@hotmail.com">leesol99@hotmail.com</a></li><li><a href="tel:+821092628007">Phone · +82 10-9262-8007</a></li><li><a href="#kakao">KakaoTalk QR</a></li><li><a href="https://wa.me/821092628007" target="_blank" rel="noopener">WhatsApp · 010-9262-8007</a></li></ul>
       </div>
     </div>
     <div class="foot-bottom">
@@ -892,18 +1008,23 @@
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('#toursGrid .tour-card');
   const emptyNote = document.getElementById('emptyNote');
+  const specialtyPanels = document.querySelectorAll('#toursGrid .specialty-panel');
   filterBtns.forEach(btn => btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const f = btn.dataset.filter;
+    const isSpecialty = f === 'business' || f === 'medical' || f === 'custom';
     let shown = 0;
     cards.forEach(c => {
       const cats = (c.dataset.cat || '').split(' ');
-      const show = f === 'all' || cats.includes(f);
+      const show = !isSpecialty && (f === 'all' || cats.includes(f));
       c.style.display = show ? '' : 'none';
       if(show) shown++;
     });
-    emptyNote.style.display = shown === 0 ? 'block' : 'none';
+    specialtyPanels.forEach(p => {
+      p.classList.toggle('show', isSpecialty && p.dataset.specialty === f);
+    });
+    emptyNote.style.display = (!isSpecialty && shown === 0) ? 'block' : 'none';
   }));
 
   const io = new IntersectionObserver((entries) => {
