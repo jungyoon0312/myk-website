@@ -88,41 +88,27 @@
   .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.6rem;color:var(--ink)}
 
   /* HERO */
-  .hero{position:relative;overflow:hidden;padding:80px 0 90px}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(2.3rem,5vw,3.6rem)}
-  .hero p.lead{font-size:1.18rem;color:var(--ink-soft);margin:22px 0 32px;max-width:40ch}
+  .hero{position:relative;overflow:hidden;padding:72px 0 80px;
+    background:
+      radial-gradient(ellipse 70% 60% at 85% 20%, rgba(217,236,230,.9), transparent 60%),
+      radial-gradient(ellipse 50% 45% at 5% 90%, rgba(246,226,216,.55), transparent 55%),
+      var(--paper)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(2.6rem,5.5vw,4rem);letter-spacing:-.02em;line-height:1.08;margin-bottom:10px}
+  .hero .tagline{font-family:'Poppins','Inter',sans-serif;font-size:clamp(1.15rem,2.2vw,1.4rem);
+    font-weight:600;color:var(--accent);margin:0 0 16px}
+  .hero p.lead{font-size:1.12rem;color:var(--ink-soft);margin:0 0 28px;max-width:36ch;line-height:1.55}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .hero-note{margin-top:26px;display:flex;gap:22px;flex-wrap:wrap;color:var(--ink-soft);font-size:.9rem}
-  .hero-note span{display:flex;align-items:center;gap:8px}
-  .hero-note b{color:var(--ink)}
   .hero-visual{position:relative}
-  .hero-photo{border-radius:24px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;
-    background:linear-gradient(135deg,#2a7d68,#1f6f5c 40%,#164f42);position:relative}
+  .hero-photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;
+    background:linear-gradient(135deg,#2a7d68,#1f6f5c 40%,#164f42)}
   .hero-photo img{width:100%;height:100%;object-fit:cover}
-  .hero-badge{position:absolute;bottom:-22px;left:-22px;background:var(--white);border-radius:16px;
-    padding:16px 20px;box-shadow:var(--shadow);display:flex;align-items:center;gap:12px}
-  .hero-badge .num{font-size:1.6rem;font-weight:800;color:var(--accent)}
-  .hero-badge .txt{font-size:.82rem;color:var(--ink-soft);line-height:1.3}
-  .hero-quote{margin-top:26px;border-left:3px solid var(--accent);padding:4px 0 4px 18px;
-    max-width:46ch;min-height:78px}
-  .hero-quote .stars{color:#e0a800;letter-spacing:1px;font-size:.9rem}
-  .hero-quote p{font-style:italic;color:var(--ink);font-size:1.02rem;margin:6px 0 8px;
-    transition:opacity .4s ease}
-  .hero-quote .cite{font-size:.82rem;color:var(--ink-soft);font-weight:600;transition:opacity .4s ease}
-  .hero-quote.fade p,.hero-quote.fade .cite{opacity:0}
-  .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;z-index:-1}
-  .blob.a{width:340px;height:340px;background:#d9ece6;top:-80px;right:-60px}
-  .blob.b{width:280px;height:280px;background:#f6e2d8;bottom:-40px;left:-80px}
 
   /* TRUST */
   .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper-2)}
-  .trust .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;padding:20px 24px;
-    font-size:.9rem;color:var(--ink-soft);font-weight:500}
+  .trust .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:center;padding:16px 24px;
+    font-size:.88rem;color:var(--ink-soft);font-weight:500}
   .trust b{color:var(--ink)}
-  .pillars{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px;max-width:52ch}
-  .pillar{font-size:.78rem;font-weight:600;color:var(--ink-soft);border:1px solid var(--line);
-    background:rgba(255,255,255,.7);padding:7px 12px;border-radius:999px}
 
   /* SERVICES */
   #services{background:var(--paper-2)}
@@ -505,42 +491,19 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="blob a"></div>
-  <div class="blob b"></div>
   <div class="wrap hero-grid">
     <div class="hero-text reveal">
-      <span class="eyebrow">MYK TOUR</span>
-      <h1>Your Trusted Partner <span class="accent">in Korea</span></h1>
-      <p class="lead"><b>Beyond Tourism.</b> Connecting Business, People &amp; Experiences — a local destination &amp; business support partner for individuals, companies and groups visiting Korea.</p>
+      <h1>MYK TOUR</h1>
+      <p class="tagline">Your Trusted Partner in Korea</p>
+      <p class="lead">Beyond tourism — connecting business, people and experiences for visitors, companies and groups.</p>
       <div class="hero-cta">
         <a href="#services" class="btn btn-primary">Explore Services</a>
-        <a href="#book" class="btn btn-ghost">Get in Touch &rarr;</a>
-      </div>
-      <div class="pillars">
-        <span class="pillar">Tourism</span>
-        <span class="pillar">Business Support</span>
-        <span class="pillar">Medical Concierge</span>
-        <span class="pillar">Lifestyle Experiences</span>
-        <span class="pillar">Custom Local Services</span>
-      </div>
-      <div class="hero-note">
-        <span>&#9733; <b>Top-rated</b> on GetYourGuide &amp; Klook</span>
-        <span>&#128172; Fluent English</span>
-        <span>&#128100; Private &amp; corporate ready</span>
-      </div>
-      <div class="hero-quote" id="heroQuote">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p id="hqText">"A masterclass tour. Marcos was an absolutely superb guide with a wealth of knowledge on all of the sites visited."</p>
-        <div class="cite" id="hqCite">— Austin, United States</div>
+        <a href="#book" class="btn btn-ghost">Get in Touch</a>
       </div>
     </div>
     <div class="hero-visual reveal">
       <div class="hero-photo">
-        <img src="images/profile1.jpg" alt="MYK guide Marcos Lee with travelers in Korea" width="800" height="1000">
-      </div>
-      <div class="hero-badge">
-        <div class="num">5.0&#9733;</div>
-        <div class="txt">Rated on GetYourGuide<br>&amp; Viator</div>
+        <img src="images/profile1.jpg" alt="MYK TOUR founder Marcos Lee with travelers in Korea" width="800" height="1000">
       </div>
     </div>
   </div>
@@ -549,10 +512,9 @@
 <!-- TRUST -->
 <div class="trust">
   <div class="wrap">
-    <div>&#10003; <b>Government-licensed</b> local partner</div>
-    <div>&#10003; <b>English-speaking</b>, born &amp; raised in Korea</div>
-    <div>&#10003; Serves <b>travelers, companies &amp; groups</b></div>
-    <div>&#10003; <b>Bookable tours</b> + custom corporate support</div>
+    <div>Licensed local partner</div>
+    <div>Fluent English</div>
+    <div>Travelers · Companies · Groups</div>
   </div>
 </div>
 
@@ -1179,29 +1141,6 @@
 
   const header = document.getElementById('top');
   window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10));
-
-  // rotating hero testimonials (real reviews)
-  const heroQuotes = [
-    {t:'"A masterclass tour. Marcos was an absolutely superb guide with a wealth of knowledge on all of the sites visited."', c:'— Austin, United States'},
-    {t:'"Marcos was fantastic! Very communicative, flexible with our time constraints, and got us back to the airport right on time. Highly recommend!"', c:'— Jonathan, United States'},
-    {t:'"Very professional and friendly, and so knowledgeable about Seoul\'s rich, deep history. He took us to the best spots and yummy new things."', c:'— GetYourGuide traveler, United States'},
-    {t:'"Our guide, Mr. Lee, was exceptional. His storytelling made each site come alive — punctual, professional and incredibly knowledgeable."', c:'— Suwon transit tour, South Korea'}
-  ];
-  const hqBox = document.getElementById('heroQuote');
-  const hqText = document.getElementById('hqText');
-  const hqCite = document.getElementById('hqCite');
-  let hqi = 0;
-  if(hqBox){
-    setInterval(() => {
-      hqBox.classList.add('fade');
-      setTimeout(() => {
-        hqi = (hqi + 1) % heroQuotes.length;
-        hqText.textContent = heroQuotes[hqi].t;
-        hqCite.textContent = heroQuotes[hqi].c;
-        hqBox.classList.remove('fade');
-      }, 400);
-    }, 5000);
-  }
 
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navLinks');
